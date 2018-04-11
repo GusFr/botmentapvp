@@ -1,18 +1,23 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
+const bot = new Discord.Client();
 
-var bot = new Discord.Client();
+var prefix = ("/")
 
-bot.on("message", function (message) {
-    if (message.content === "/help") {
-        message.reply("Patientez le bot se developpe")
+bot.on('ready', function() {
+    bot.user.setActivity("Menta Bot : Tapez /help");
+    console/log("Bot Succes");
+});
 
-	}
+bot.login("NDE2MzMzNTYzNzgxMTg1NTU3.DbATXg.Ls-qt66uNaRx9xOG_JkPkfOExoE");
 
-})
 
-bot.on("ready", function() {
-    bot.user.setActivity("MentaBot, Tapez /help");
-    console.log("Le bot a bien ete conecte")
-})
+bot.on('message', message => {
+    if (message.content === prefix + "help"){
+        message.channel.sendMessage("Liste des commandes: \n -/help");
+    }
 
-bot.login("NDE2MzMzNTYzNzgxMTg1NTU3.DbAOjQ._333l8YCZ7HOpkbTr3crtvnA0oo")
+    if (message.content === "Salut"){
+        message.reply("Hey :)");
+        console.log("Commade Salut Sucess");
+    }
+});
