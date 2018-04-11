@@ -34,6 +34,6 @@ bot.on('guildMemberAdd', function (member) {
 })
 
 
-bot.login('NDE2MzMzNTYzNzgxMTg1NTU3.Da96Jg.Kdsj384uNqN3y21Y09A3QXNWY4c')
+bot.login(process.env.TOKEN)
 
 
