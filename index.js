@@ -4,7 +4,7 @@ var bot = new Discord.Client();
 
 bot.on("message", function (message) {
     if (message.content === "/help") {
-        message.channel.sendMessage("Liste des Commandes: \n- /help")
+        message.channel.sendMessage("```\nListe des Commandes: \n- /help\n```")
 
 	}
 
@@ -15,4 +15,4 @@ bot.on("ready", function() {
     console.log("Le bot a bien ete conecte")
 })
 
-bot.login("NDE2MzMzNTYzNzgxMTg1NTU3.DbAOjQ._333l8YCZ7HOpkbTr3crtvnA0oo")
+bot.login(discord.env.TOKEN)
