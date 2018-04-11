@@ -4,7 +4,7 @@ var bot = new Discord.Client();
 
 bot.on("message", function (message) {
     if (message.content === "/help") {
-        message.reply("Liste des Commandes: \n- /help")
+        message.channel.sendMessage("Liste des Commandes: \n- /help")
 
 	}
 
