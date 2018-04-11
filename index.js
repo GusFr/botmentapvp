@@ -12,8 +12,8 @@ bot.on("message", function (message) {
             .addField("- /help","**Page d'aide**", true)
             .addField("`◊◊◊◊◊◊◊◊◊◊◊◊◊`")
             .addField("**Commandes Admin:**", "`◊◊◊◊◊◊◊◊◊◊◊◊◊`", true)
-            .addField("- /kick", "**Expulsez Un Joueur**", true)
-            .addField("- /ban", "**Bannir Un Joueur**", true)
+            .addField("- /kick @Joueur", "**Expulsez Un Joueur**", true)
+            .addField("- /ban @Joueur", "**Bannir Un Joueur**", true)
             .setColor("0x009127")
             .setFooter("©Menta PvP - 2018 Tout droits réservés")
         message.channel.sendEmbed(embed);
