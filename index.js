@@ -8,8 +8,8 @@ bot.on("message", function (message) {
         var embed = new Discord.RichEmbed()
             .setTitle("Liste des Commandes")
             .setDescription("En cours de devv")
-            .addField("/help","Page d'aide", true)                 
-
+            .addField("/help","Page d'aide", true)
+    }                         
 })
 
 bot.on("ready", function() {
