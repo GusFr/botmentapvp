@@ -1,12 +1,14 @@
 const Discord = require("discord.js");
 
 var bot = new Discord.Client();
+var prefix = "/";
 
 bot.on("message", function (message) {
-    if (message.content === "/help") {
-        message.channel.sendMessage("```\nListe des Commandes: \n- /help\n```")
-
-	}
+    if (message.content === prefix + "help") {
+        var embed = new Discord.RichEmbed()
+            .setTitle("Liste des Commandes")
+            .setDescription("En cours de devv")
+            .addField("/help","Page d'aide", true)                 
 
 })
 
