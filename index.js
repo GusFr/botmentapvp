@@ -13,6 +13,7 @@ bot.on("message", function (message) {
             .addField("`◊◊◊◊◊◊◊◊◊◊◊◊◊`")
             .addField("**Commandes Admin:**")
             .addField("`◊◊◊◊◊◊◊◊◊◊◊◊◊`")
+            .addField("- /kick", "**Expulsez Un Joueur**", true)
             .addField("- /ban", "**Bannir Un Joueur**", true)
             .setColor("0x009127")
             .setFooter("©Menta PvP - 2018 Tout droits réservés")
