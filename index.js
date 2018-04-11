@@ -24,6 +24,7 @@ bot.on("message", function (message) {
 bot.on("ready", function() {
     bot.user.setActivity("MentaBot : Tapez /help");
     console.log("Le bot a bien ete conecte")
+    message.channel.send("Le bot s'est lancé avec Succes !")
 })
 
 bot.login(process.env.TOKEN)
