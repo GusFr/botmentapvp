@@ -9,7 +9,11 @@ bot.on("message", function (message) {
             .setTitle("Liste des Commandes")
             .setDescription("En cours de devv")
             .addField("/help","Page d'aide", true)
-    }                         
+            .setColor("0x96CA2D")
+            .setFooter("Good")
+        message.channel.sendEmbed(embed);
+    }  
+                           
 })
 
 bot.on("ready", function() {
