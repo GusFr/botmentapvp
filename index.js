@@ -9,6 +9,7 @@ bot.on("message", function (message) {
             .setTitle("Liste des Commandes")
             .setDescription("Liste des commandes du BOT")
             .addField("- /help","**Page d'aide**", true)
+            .addField("◊◊◊◊◊◊◊◊◊◊◊◊◊", true)
             .setColor("0x009127")
             .setFooter("©Menta PvP - 2018 Tout droits réservés")
         message.channel.sendEmbed(embed);
