@@ -52,15 +52,15 @@ bot.on("message", function (message) {
             .addField("- /kick @Joueur", "**Expulsez Un Joueur**", true)
             .addField("- /ban @Joueur", "**Bannir Un Joueur**", true)
             .setColor("0x009127")
-            .setFooter("©Menta PvP - 2018 Tout droits réservés")
+            .setFooter("©Galactic PvP - 2018 Tout droits réservés")
         message.channel.sendEmbed(embed);
     }  
 
 })
 
 bot.on("ready", function() {
-    bot.user.setActivity("MentaBot : Tapez /help");
-    console.log("MentaBot Succes Connected to Menta PvP")
+    bot.user.setActivity("GalaBot : Tapez /help");
+    console.log("GalaBot a ete connecte!")
 })
 
 bot.login(process.env.TOKEN)
