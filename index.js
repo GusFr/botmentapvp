@@ -9,7 +9,7 @@ bot.on('message', message => {
     command + args.shift().toLowerCase();
 
     if (command === prefix + "kick") {
-        let modRole = message.guild.roles.find("name", "Haut-Staff");
+        let modRole = message.guild.roles.find("name", "hautstaff");
         if(!message.member.roles.has(modRole.id)) {
             return message.reply("Erreur: Tu n'as pas la permission!").catch(console.error)
         }
@@ -31,7 +31,7 @@ bot.on('message', message => {
     }
     
     if (command === prefix + "ban") {
-        let modRole = message.guild.roles.find("name", "Staff")
+        let modRole = message.guild.roles.find("name", "staff")
         if(!message.member.roles.has(modRole.id)) {
             return  message.reply("Erreur: Tu n'as pas la permission").catch(console.error)
         }
