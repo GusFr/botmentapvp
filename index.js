@@ -14,7 +14,7 @@ bot.on('message', message => {
             return message.reply("Erreur: Tu n'as pas la permission!").catch(console.error)
         }
         if(message.mentions.users.size === 0) {
-            return message.reply("Erreur: Merci de mentionner l'utilisateurà expulsez").catch(console.error)
+            return message.reply("Erreur: Merci de mentionner l'utilisateur à expulser").catch(console.error)
         }
         let kickMember = message.guild.member(message.mentions.users.first());
         if(!kickMember) {
@@ -39,7 +39,7 @@ bot.on('message', message => {
         if (member) return message.reply("Erreur: Merci de mentionner l'utilisateur à bannir !");
         member.ban().then(member => {
             message.reply(`${member.user.username} a été banni avec succès!`).catch(console.error)
-            message.guild.channels.find("name", "logs_discord").send(`**${member.user.username}** a été banni du discord par **${message.author.username}`)
+            message.guild.channels.find("name", "logs_discord").send(`**${member.user.username}** a été banni du discord par **${message.author.username}**`)
         }).catch(console.error)
 }})
 
@@ -63,7 +63,7 @@ bot.on("message", function (message) {
 
 bot.on("ready", function() {
     bot.user.setActivity("MentaBot : Tapez /help");
-    console.log("Le bot a bien ete conecte")
+    console.log("MentaBot Succes Connected to Menta PvP")
 })
 
 bot.login(process.env.TOKEN)
