@@ -8,9 +8,9 @@ bot.on('message', message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     command + args.shift().toLowerCase();
 
-    if (command === prefix + "kick") {
+    if (command === "kick") {
         let modRole = message.guild.roles.find("name", "permkick");
-        if(!message.member.roles.has(modRole)) {
+        if(!message.member.roles.has(modRole.id)) {
             return message.reply("Erreur: Tu n'as pas la permission!").catch(console.error)
         }
         if(message.mentions.users.size === 0) {
@@ -30,9 +30,9 @@ bot.on('message', message => {
 
     }
     
-    if (command === prefix + "ban") {
+    if (command === "ban") {
         let modRole = message.guild.roles.find("name", "permban")
-        if(!message.member.roles.has(modRole)) {
+        if(!message.member.roles.has(modRole.id)) {
             return  message.reply("Erreur: Tu n'as pas la permission").catch(console.error)
         }
         const member = message.mentions.members.first();
