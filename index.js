@@ -24,11 +24,24 @@ bot.on('message', message => {
             return message.reply("Erreur: Je n'ai pas la permission KICK_MEMBERS pour faire cela.").catch(console.error)
         }
         kickMember.kick().then(member => {
-            message.reply('${member.user.username} a été expulsé !').catch(console.error)
-            message.guild.channels.find("name", "logs_discord").send('**${member.user.username a été expulsé du discord par **${member.author.username')
+            message.reply(`${member.user.username} a été expulsé !`).catch(console.error)
+            message.guild.channels.find("name", "logs_discord").send(`**${member.user.username} a été expulsé du discord par **${message.author.username}`)
+        }).catch(console.error)
 
     }
-
+    
+    if (command === "ban") {
+        let modRole = message.guild.roles.find("name", "permban")
+        if(!message.member.roles.has(modRole.id)) {
+            return  message.reply("Erreur: Tu n'as pas la permission").catch(console.error)
+        }
+        const member = message.mentions.members.first();
+        if (member) return message.reply("Erreur: Merci de mentionner l'utilisateur à bannir !");
+        member.ban().then(member => {
+            message.reply(`${member.user.username} a été banni avec succès!`).catch(console.error)
+            message.guild.channels.find("name", "logs_discord").send(`**${member.user.username}** a été banni du discord par **${message.author.username}`)
+        }).catch(console.error)
+}})
 
 bot.on("message", function (message) {
     if (message.content === prefix + "help") {
