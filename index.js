@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 var bot = new Discord.Client();
-var prefix = "/";
+var prefix = "*";
 
 bot.on('message', message => {
     let command = message.content.split(" ")[0];
@@ -48,9 +48,9 @@ bot.on("message", function (message) {
         var embed = new Discord.RichEmbed()
             .setTitle("Liste des Commandes")
             .setDescription("Liste des commandes du BOT")
-            .addField("- /help","**Page d'aide**", true)
-            .addField("- /kick @Joueur", "**Expulsez Un Joueur**", true)
-            .addField("- /ban @Joueur", "**Bannir Un Joueur**", true)
+            .addField("- *help","**Page d'aide**", true)
+            .addField("- *kick @Joueur", "**Expulsez Un Joueur**", true)
+            .addField("- *ban @Joueur", "**Bannir Un Joueur**", true)
             .setColor("0x1C6CF4")
             .setFooter("©Galactic PvP - 2018 Tout droits réservés")
         message.channel.sendEmbed(embed);
@@ -59,7 +59,7 @@ bot.on("message", function (message) {
 })
 
 bot.on("ready", function() {
-    bot.user.setActivity("GalaBot : Tapez /help");
+    bot.user.setActivity("GalaBot : Tapez *help");
     console.log("GalaBot a ete connecte!")
 })
 
