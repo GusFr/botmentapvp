@@ -63,4 +63,4 @@ bot.on("ready", function() {
     console.log("GalaBot a ete connecte!")
 })
 
-bot.login(process.env.TOKEN)
+//bot.login(process.env.TOKEN)
