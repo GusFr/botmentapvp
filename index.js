@@ -59,7 +59,7 @@ bot.on("message", function (message) {
 })
 
 bot.on("ready", function() {
-    bot.user.setActivity("MentaBot : Tapez /help");
+    bot.user.setActivity("Extinction à 22 Heures");
     console.log("MentaBot Succes Connected to Menta PvP")
 })
 
