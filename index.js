@@ -49,7 +49,6 @@ bot.on("message", function (message) {
             .setTitle("Liste des Commandes")
             .setDescription("Liste des commandes du BOT")
             .addField("- /help","**Page d'aide**", true)
-            .addField("**Commandes Admin:**", "Liste des commandes admin", true)
             .addField("- /kick @Joueur", "**Expulsez Un Joueur**", true)
             .addField("- /ban @Joueur", "**Bannir Un Joueur**", true)
             .setColor("0x009127")
