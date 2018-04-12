@@ -58,9 +58,9 @@ bot.on("message", function (message) {
 
 })
 
-//bot.on("ready", function() {
-    //bot.user.setActivity("GalaBot : Tapez /help");
-    //console.log("GalaBot a ete connecte!")
-//})
+bot.on("ready", function() {
+    bot.user.setActivity("GalaBot : Tapez /help");
+    console.log("GalaBot a ete connecte!")
+})
 
-//bot.login(process.env.TOKEN)
+bot.login(process.env.TOKEN)
